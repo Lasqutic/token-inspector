@@ -1,6 +1,6 @@
 import { JsonRpcProvider, Contract, Interface } from "ethers";
-import { erc20Abi } from "./abis/erc20";
-import { multica3Abi } from "./abis/multicall3";
+import { ERC20_ABI } from "./abis/erc20";
+import { MULTICALL_ABI  } from "./abis/multicall3";
 import 'dotenv/config';
 
 type TokenData = {
@@ -17,11 +17,11 @@ if (!rpcUrl) {
 }
 
 const provider = new JsonRpcProvider(rpcUrl);
-const erc20Interface = new Interface(erc20Abi);
-const multicall3Interface = new Interface(multica3Abi);
+const erc20Interface = new Interface(ERC20_ABI);
+const multicall3Interface = new Interface(MULTICALL_ABI );
 
 async function fetchDirect(tokenAddress: string): Promise<TokenData> {
-  const token = new Contract(tokenAddress, erc20Abi, provider);
+  const token = new Contract(tokenAddress, ERC20_ABI, provider);
 
   const [symbol, name, rawDecimals] = await Promise.all([
     token.symbol(),
