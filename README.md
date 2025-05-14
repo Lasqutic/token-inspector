@@ -14,8 +14,8 @@ A small TypeScript utility to fetch ERC-20 token details (symbol, name, decimals
 my-token-info/
 ├─ src/
 │  ├─ abis/
-│  │  ├─ erc20.ts          # ERC-20 ABI definitions
-│  │  └─ multicall3.ts     # Multicall3 ABI definition
+│  │  ├─ shortErc20Abi.ts  # ERC-20 ABI definitions
+│  │  └─ multicallAbi.ts   # Multicall3 ABI definition
 │  └─ index.ts             # Main entry point
 ├─ package.json            # NPM scripts & dependencies
 ├─ tsconfig.json           # TypeScript configuration
