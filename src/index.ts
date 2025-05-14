@@ -1,7 +1,7 @@
 import { JsonRpcProvider, Contract, Interface } from "ethers";
 import { erc20Abi } from "./abis/erc20";
 import { multica3Abi } from "./abis/multicall3";
-import dotenv from "dotenv";
+import 'dotenv/config';
 
 type TokenData = {
   tokenAddress: string;
@@ -10,7 +10,6 @@ type TokenData = {
   decimals: number;
 };
 
-dotenv.config();
 const rpcUrl = process.env.RPC_URL;
 
 if (!rpcUrl) {
