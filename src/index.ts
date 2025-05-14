@@ -1,6 +1,6 @@
 import { JsonRpcProvider, Contract, Interface } from "ethers";
-import { ERC20_ABI } from "./abis/erc20";
-import { MULTICALL_ABI  } from "./abis/multicall3";
+import { ERC20_ABI } from "./abis/shortErc20Abi";
+import { MULTICALL_ABI  } from "./abis/multicallAbi";
 import 'dotenv/config';
 
 type TokenData = {
